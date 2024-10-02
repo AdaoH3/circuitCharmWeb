@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+html, body {
+    width: 100%; /* Ensure the body takes the full width */
+    margin: 0;   /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+}
+
+.left-margin, .main-body {
+    width: 100%; /* Ensure left margin and main body take full width */
+}
+
+.left-margin {
+    width: 12.5%; /* Left image area */
+    background: url('/images/LeftMargin.png') no-repeat center center; /* Ensure image path is correct */
+    background-size: cover;
+    min-height: 100vh; /* Full height */
+}
+
+.main-body {
+    width: 87.5%; /* Remaining width for main content */
+    background: url('images/body.png') no-repeat center center; /* Ensure image path is correct */
+    background-size: cover;
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.title {
+    text-align: center; /* Center the title text */
+    color: white; /* Example color */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.items-row {
+    display: flex; /* Use flexbox for row layout */
+    justify-content: space-between; /* Space items evenly */
+    width: 100%; /* Full width for items row */
+    padding: 0 20px; /* Optional: padding for items */
+}
+
+.item {
+    flex: 1; /* Each item takes equal space */
+    text-align: center; /* Center text inside each item */
+    color: white; /* Example color */
+    margin: 10px; /* Add some margin between items */
+    padding: 10px; /* Add padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background for readability */
+}
+
+.motto {
+    color: #000;
+    font-family: "Darumadrop One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: -75px 0 0 45%; /* Top, right (space from right), bottom, left */
+    align-self: center; /* Align motto within its flex container */
+}
+
+.images-intro-row1 {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    width: 100%; /* Full width of the container */
+    margin: 20px 0; /* Optional: margin for spacing */
+    gap: 10%;
+    box-sizing: border-box; /* Include padding/borders in width/height calculations */
+}
+
+.image
+{
+    flex: 1 1 0; /* Allow flex items to grow and shrink equally */
+    width: calc(50% - 10px); /* Subtract half the gap *//* Each image takes up 50% of the row */
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Optional: cover the area while maintaining aspect ratio */
+}
